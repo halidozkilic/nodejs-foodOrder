@@ -1,0 +1,51 @@
+<% include partials/header %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    <div class="container">
+        <header class="jumbotron">
+
+         <h1>Welcome our restaurant</h1>
+            <p>Enjoy your delicious meal</p>
+            <p>
+                <a class="btn btn-primary btn large" href="/foods/new">add new food</a>
+                <a class="btn btn-primary btn large" href="/">home page</a>
+            </p>
+               
+               
+
+        </header>
+
+        <div class="row">
+
+              <% foods.forEach(function(yemek){%>
+
+                 <div class="col-md-3 col-sm-6">
+                     <div class="thumbnail">
+                            <img src="<%= yemek.pic %>" style="max-height: 200px;">
+                            <div class="caption text-center">
+                                <h3><%= yemek.name %></h3>
+                            </div>
+                          
+                     </div>
+                     
+                     
+                  </div>
+    
+              <%  });%>
+        
+        </div>    
+
+
+</div>
+</body>
+</html>
+
+
+<% include partials/footer %>
